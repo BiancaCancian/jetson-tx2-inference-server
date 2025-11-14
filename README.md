@@ -8,15 +8,6 @@ Ambiente Docker configurado para rodar o **Edge Impulse CLI** em sistemas basead
 docker --version
 ```
 
-## Verificar se a câmera está funcionando
-
-```bash
-ls /dev/video*
-```
-```bash
-gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! xvimagesink
-```
-
 ## Verificar se a câmera funciona no TX2
 
 ```bash
