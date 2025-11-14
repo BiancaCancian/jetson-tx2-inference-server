@@ -31,5 +31,7 @@ public.ecr.aws/g7a8t7v6/inference-container:c94e7ccaca5d3e76e7ed6b046d7a5108b876
 --run-camera
 ```
 
+<img width="904" height="689" alt="Captura de tela 2025-11-14 122505" src="https://github.com/user-attachments/assets/91018760-728a-4c7c-96f2-dc388eddf5d2" />
+
 
 
