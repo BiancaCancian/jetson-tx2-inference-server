@@ -8,29 +8,38 @@ Ambiente Docker configurado para rodar o **Edge Impulse CLI** em sistemas basead
 docker --version
 ```
 
-## Verificar se a câmera funciona no TX2
+## Listar diretório 
 
 ```bash
- ls /dev/video*
+ ls 
 ```
 
-## teste o vídeo
+## Listar containers existentes
 ```bash
- gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! xvimagesink
+ docker ps -a
 ```
 
-## Rodar inferência do Edge Impulse (com câmera) no Docker
+## Iniciar o container
 
 ```bash
- sudo docker run --rm -it \
---runtime nvidia --gpus all \
--p 1337:1337 \
---device /dev/video0:/dev/video0 \
-public.ecr.aws/g7a8t7v6/inference-container:c94e7ccaca5d3e76e7ed6b046d7a5108b8762707 \
---api-key EI_SUA_API_KEY_AQUI \
---run-camera
+ docker start edge-impulse-tx2
 
 ```
+
+## Entrar no container em modo interativo
+
+```bash
+ docker exec -it edge-impulse-tx2 /bin/bash
+
+```
+
+## Rodar o Edge Impulse Linux Runner com servidor HTTP
+
+```bash
+ edge-impulse-linux-runner --force-target runner-linux-aarch64 --run-https-server 1337
+
+```
+
 <img width="1920" height="1080" alt="Screenshot from 2025-11-15 02-59-00" src="https://github.com/user-attachments/assets/80eb6dc8-cd9f-41fb-a7d4-dc6c6a737ace" />
 
 
