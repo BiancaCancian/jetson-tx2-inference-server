@@ -89,3 +89,9 @@ wget https://pjreddie.com/media/files/yolov3-tiny.weights
 ```bash
 jtop
 ```
+
+## YOLOv3 running with NVIDIA GPU acceleration (monitored via jtop).
+![demo2](https://github.com/user-attachments/assets/0f03891e-12f3-4455-8b75-8c881eaed2b0)
+![demo](https://github.com/user-attachments/assets/51feac2b-42d2-4ef8-822a-bd5af9e4fd9e)
+
+
